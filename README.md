@@ -118,5 +118,3 @@ python predict.py --source datasets/rotten_grade_det_4c/images/test
 ## Notes
 
 - This repository intentionally does not include local virtual environments.
-- Install dependencies locally before running.
-- The project has been cleaned to remove thesis-related materials, K230 deployment files, and personal machine paths.
