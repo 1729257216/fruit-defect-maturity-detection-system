@@ -118,5 +118,3 @@ python predict.py --source datasets/rotten_grade_det_4c/images/test
 ## 说明
 
 - 本仓库不包含本地虚拟环境，请使用者自行安装依赖。
-- 当前版本已经清理掉论文写作、K230 部署以及个人本机环境相关内容。
-- 仓库名称建议继续保留英文，以保证 Git、SSH 远程地址和跨平台兼容性；中文名称可以体现在 README 标题和仓库描述中。
