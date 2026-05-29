@@ -1,0 +1,9 @@
+path: .
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: unripe
+  1: ripe
+  2: slight_rotten
+  3: severe_rotten

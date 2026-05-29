@@ -1,0 +1,9 @@
+names:
+  0: unripe
+  1: ripe
+  2: slight_rotten
+  3: severe_rotten
+path: c:\Users\86151\Desktop\mangguo_ai_project\datasets\rotten_grade_det_4c
+test: images/test
+train: images/train
+val: images/val

@@ -1,0 +1,4 @@
+unripe
+ripe
+slight_rotten
+severe_rotten

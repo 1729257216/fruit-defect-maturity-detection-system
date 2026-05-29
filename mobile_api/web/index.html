@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>基于深度学习的水果缺陷与成熟度检测系统</title>
+  <meta
+    name="description"
+    content="基于 React、Tailwind CSS 与 Framer Motion 的水果 AI 检测暗色仪表盘，支持上传、Analyze 按钮、扫描中动画、缺陷标注与悬浮提示。"
+  >
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#1c1917",
+            sand: "#f7f1e8",
+            citrus: "#f6a63a",
+            leaf: "#1f7a4d",
+            ember: "#c65a2e",
+            panel: "rgba(255, 250, 244, 0.82)"
+          },
+          boxShadow: {
+            soft: "0 24px 60px rgba(76, 56, 33, 0.12)"
+          },
+          fontFamily: {
+            sans: ["HarmonyOS Sans SC", "Microsoft YaHei UI", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@18.3.1",
+        "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime",
+        "react-dom": "https://esm.sh/react-dom@18.3.1?external=react",
+        "react-dom/client": "https://esm.sh/react-dom@18.3.1/client?external=react",
+        "htm": "https://esm.sh/htm@3.1.1",
+        "framer-motion": "https://esm.sh/framer-motion@11.3.19?external=react,react/jsx-runtime,react-dom"
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="/demo-assets/react_demo.css">
+</head>
+<body class="min-h-screen bg-[#030712] text-white antialiased">
+  <div id="root"></div>
+  <script type="module" src="/demo-assets/react_demo.js"></script>
+</body>
+</html>

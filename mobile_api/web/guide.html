@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>项目说明 - 基于深度学习的水果缺陷与成熟度检测系统</title>
+  <meta
+    name="description"
+    content="水果缺陷与成熟度检测系统的项目概览、技术路线、页面组织方式与扩展方向说明。"
+  >
+  <link rel="stylesheet" href="/demo-assets/styles.css">
+</head>
+<body>
+  <div class="page-orchard" aria-hidden="true">
+    <span class="fruit-spark spark-one"></span>
+    <span class="fruit-spark spark-two"></span>
+    <span class="fruit-spark spark-three"></span>
+  </div>
+
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="/demo">
+        <span class="brand-mark">FD</span>
+        <span class="brand-copy">
+          <strong>基于深度学习的水果缺陷与成熟度检测系统</strong>
+          <span>项目说明与技术概览</span>
+        </span>
+      </a>
+      <nav class="topnav">
+        <a href="/demo">返回功能页</a>
+        <a href="/docs" target="_blank" rel="noreferrer">API 文档</a>
+      </nav>
+    </header>
+
+    <section class="hero hero-compact">
+      <div class="hero-copy">
+        <p class="eyebrow">项目说明</p>
+        <h1>将系统目标、实现路径与展示结构集中归纳到这里</h1>
+        <p class="hero-text">
+          本页用于补充项目概览、核心技术路线、系统页面组织方式以及后续可扩展方向。
+          首页保持功能优先，这里则负责呈现完整的项目背景与实现逻辑。
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="/demo">返回功能展示</a>
+          <a class="button ghost" href="/docs" target="_blank" rel="noreferrer">查看 API 文档</a>
+        </div>
+      </div>
+
+      <aside class="hero-side">
+        <section class="hero-card hero-card-accent">
+          <span class="status-label">页面职责</span>
+          <strong>首页聚焦检测流程，本页聚焦系统说明</strong>
+          <p>
+            这种组织方式让结果展示更直接，同时保留项目背景、技术路线、
+            部署思路和扩展方向等说明内容。
+          </p>
+        </section>
+      </aside>
+    </section>
+
+    <main class="page-grid">
+      <section class="panel panel-story">
+        <div class="section-kicker">项目概览</div>
+        <div class="panel-heading">
+          <h2>围绕水果品质识别构建可交互的检测系统</h2>
+          <p>
+            项目以水果成熟度与缺陷检测为核心任务，通过目标检测模型完成定位与分类，
+            并将推理结果封装成面向展示与使用的交互界面。
+          </p>
+        </div>
+        <div class="story-grid">
+          <article class="story-card">
+            <span class="feature-index">01</span>
+            <h3>任务目标</h3>
+            <p>识别水果成熟状态与缺陷等级，并输出边界框、类别、风险摘要和结果图片。</p>
+          </article>
+          <article class="story-card">
+            <span class="feature-index">02</span>
+            <h3>当前示例</h3>
+            <p>当前演示以芒果样本为主，采用四分类检测方案，支持本地图片快速测试与结果回看。</p>
+          </article>
+          <article class="story-card">
+            <span class="feature-index">03</span>
+            <h3>交付形式</h3>
+            <p>最终交付为可运行的网站界面与本地推理接口，便于展示、调试与后续扩展。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel panel-architecture">
+        <div class="section-kicker">技术路线</div>
+        <div class="panel-heading">
+          <h2>数据、模型、接口与前端四部分协同工作</h2>
+          <p>
+            系统从数据整理开始，经过模型训练与实验对比，再通过接口服务连接到网页端，
+            最终形成完整的检测展示链路。
+          </p>
+        </div>
+        <div class="architecture-flow">
+          <article class="arch-card">
+            <span class="arch-step">步骤 1</span>
+            <h3>数据集整理</h3>
+            <p>清洗图片与标注文件，删除未标注样本，确保训练与验证集路径规范且可复现。</p>
+          </article>
+          <article class="arch-card">
+            <span class="arch-step">步骤 2</span>
+            <h3>模型训练</h3>
+            <p>使用 YOLO 系列模型进行多组训练实验，对 batch、图像尺寸和类别权重等配置进行对比。</p>
+          </article>
+          <article class="arch-card">
+            <span class="arch-step">步骤 3</span>
+            <h3>接口封装</h3>
+            <p>借助 FastAPI 提供健康检查、类别查询和图片预测接口，返回检测结构化结果与标注图。</p>
+          </article>
+          <article class="arch-card">
+            <span class="arch-step">步骤 4</span>
+            <h3>前端展示</h3>
+            <p>网页端将上传、推理、可视化对比、历史记录和详细输出整合到一体化界面中。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel panel-process">
+        <div class="section-kicker">页面结构</div>
+        <div class="panel-heading">
+          <h2>为什么将重要信息集中放在主界面</h2>
+          <p>
+            首页优先承接用户操作与结果反馈，项目说明页承担补充性内容，
+            可以让主流程更清晰，也更方便快速演示系统能力。
+          </p>
+        </div>
+        <div class="process-list">
+          <article class="process-item">
+            <strong>输入区集中</strong>
+            <p>上传、拖拽、粘贴截图与参数调整都集中在首页左侧，减少操作路径。</p>
+          </article>
+          <article class="process-item">
+            <strong>结果区集中</strong>
+            <p>摘要卡片、风险条、原图与标注图对比、历史记录和详细表格都在同一页面完成联动。</p>
+          </article>
+          <article class="process-item">
+            <strong>说明页独立</strong>
+            <p>项目说明、技术路线和扩展方向独立成页，避免主展示界面被长段文字挤占空间。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel panel-proof">
+        <div class="section-kicker">扩展方向</div>
+        <div class="panel-heading">
+          <h2>系统后续还可以继续扩展的方向</h2>
+          <p>
+            在当前检测与展示流程稳定运行的基础上，系统还可以从模型、数据与交互体验三个层面继续增强。
+          </p>
+        </div>
+        <div class="proof-list">
+          <article class="proof-item">
+            <strong>多模型对比</strong>
+            <p>继续补充不同模型结构的实验结果，例如 YOLOv8n、YOLOv8s 或改进模块版本。</p>
+          </article>
+          <article class="proof-item">
+            <strong>更多水果类型</strong>
+            <p>在现有样本基础上新增苹果、橙子等水果类别，扩展为更加通用的水果检测系统。</p>
+          </article>
+          <article class="proof-item">
+            <strong>部署与管理</strong>
+            <p>增加结果数据库、用户管理与批量图片分析能力，形成更完整的应用系统。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
